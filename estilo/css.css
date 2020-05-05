@@ -1,5 +1,4 @@
 body{
-    
     margin: 0px;
     background-color: #FFCC00;
 }
@@ -96,6 +95,10 @@ body{
   overflow: scroll;
   padding: 30px;
   position: relative;
+  display: flex;
+  justify-content:center ;
+  
+
    
 }
 
@@ -105,7 +108,7 @@ body{
   padding-bottom: 10px;
 }
 
-.carousel__item {
+.carousel-item {
   background-color: white;  
   width:200px ;
   height: 250px;
@@ -114,16 +117,35 @@ body{
   margin-right:10px ;
   display: inline-block;  
   cursor: pointer;
+  transition: 450ms all;
+  transform-origin:center left;
+  position: relative;
 
 }
 
-.carousel__item:hover ~ .carousel__item {
+.carousel-item:hover ~ .carousel-item {
     transform: translate3d(100px, 0, 0);   
 }
-.carousel__container:hover .carousel__item{
+.carousel__container:hover .carousel-item{
     opacity:0.3;
 }
-.carousel__container:hover .carousel__item:hover{
+.carousel__container:hover .carousel-item:hover{
     transform: scale(1.5);
     opacity:1;
+}
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel {
+    background: linear-gradient(to top, rgba(205,92,92,1) 0%, rgba(240,128,128,0) 100% );
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
 }
